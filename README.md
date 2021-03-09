@@ -18,3 +18,9 @@ It could be cloud-storage, nfs server ot local disk, however, it should be noted
 K8s users then explicitly configure the application Yaml to use the persistent volume compoenent, therefore the yaml file claim the persistent volume (PVC) that matched the yaml requirements, and use the persistent volume (PV) taht connected to the actual storage backend.
 
 persistent volume claim has to exist in the same namespace as the pod using the claim, when presistent volume would be left outside the namespace
+
+# Statefulset for stateful application 
+Stateful application are applications that persists data, such as databases, MYSQL or Elastict search etc. It is deployed using StatefulSet
+
+Stateless applications do not keep record of the state and each request is completely new without any footprint.it is deployed using Deployment
+
